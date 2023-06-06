@@ -14,6 +14,14 @@ sudo apt-get install bedtools
 ```
 ## Folder contents
 
+| File/Folder Name                        | Description                                                                                                                                                                    | Usage                                                                                                                 | Source                      |
+| --------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------- | --------------------------- |
+| GCF_000022005.1_ASM2200v1_genomic.fna   | A file with the FNA file extension is a FASTA Format DNA and Protein Sequence Alignment file that stores DNA information that can be used by molecular biology software.       | A reference for alignment of the sequences from fastq files                                                           | NCBI Database               |
+| GCF_000022005.1_ASM2200v1_genomic.gff   | The general feature format (gene-finding format, generic feature format, GFF) is a file format used for describing genes and other features of DNA, RNA and protein sequences. | A reference for features associated with every protein coding gene - start/stops and annotations used on the fna file | NCBI Database               |
+| Input_Output_Storage_Folder             | Folder to store fastq files from sequencing runs                                                                                                                               | Storage folder for all files in analysis                                                                              |                             |
+| gff2bed.py                              | Code to convert gff to bed file formats.                                                                                                                                       | First step converts the gff to a readable format to generate 5 additional files in the same folder                    | Written by Nitish Malhotra. |
+| RNA_Seq_Analysis_Pipeline_Paired_End.py | Code to run all the RNA sequencing steps on the fastq files                                                                                                                    | Python containing code for fastq to coverage file generation                                                                    | Written by Neha Sontakke.   |
+
 ## File usage flowchart
 
 ## From fastq to coverage files
