@@ -12,6 +12,7 @@ sudo apt-get install bedtools
 
 #For part B - coverage files to differential gene expression
 ```
+## Folder contents
 
 ## File usage flowchart
 
