@@ -10,7 +10,7 @@ sudo apt-get install bwa
 sudo apt-get install samtools 
 sudo apt-get install bedtools
 
-#For part B - coverage files to differential gene expression
+#Requirements for part B - coverage files to differential gene expression will be installed in google collab
 ```
 ## Folder contents
 
