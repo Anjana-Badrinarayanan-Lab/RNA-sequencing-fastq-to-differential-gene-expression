@@ -21,7 +21,7 @@ sudo apt-get install bedtools
 | Input_Output_Storage_Folder             | Folder to store fastq files from sequencing runs                                                                                                                               | Storage folder for all files in analysis                                                                              |                             |
 | gff2bed.py                              | Code to convert gff to bed file formats.                                                                                                                                       | First step converts the gff to a readable format to generate 5 additional files in the same folder                    | Written by Nitish Malhotra. |
 | RNA_Seq_Analysis_Pipeline_Paired_End.py | Code to run all the RNA sequencing steps on the fastq files                                                                                                                    | Python containing code for fastq to coverage file generation                                                                    | Written by Neha Sontakke.   |
-|EdgeR Normalization 190423.ipynb | Code for DGE analysis and Log Fold Change Outputs | Written by Neha Sontakke.   |
+|EdgeR Normalization 190423.ipynb | Code for DGE analysis and Log Fold Change Outputs | R  code for coverage to logFC generation  | Written by Neha Sontakke.   |
 
 ## File usage flowchart
 
