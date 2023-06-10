@@ -32,7 +32,7 @@ def run_fastqc_analysis(filename,filelocation):
 
 
 def run_alignment(filename,filelocation):
-    os.system('gunzip '+filelocation)
+    os.system('gunzip '+filelocation+filename)
     print("File unzipped.")
     #all files will be saved in the following locations with the following names
     file_name_loc = str(filelocation+filename).split(".fastq.gz")[0]
@@ -58,22 +58,17 @@ def run_alignment(filename,filelocation):
     os.system('head '+file_name_loc+'.bed')
     os.system('bedtools coverage -a GCF_000022005.1_ASM2200v1_genomic.bed -b '+file_name_loc+'.bed > '+file_name_loc+'.cov')
     os.system('head '+file_name_loc+'.cov')
-    sample_coverage_table = pd.read_table(str(file_name_loc+".cov"),sep="\t",header=None, names=['NC_ID','Gene Start','Gene End','Gene ID','Gene Name','Strand','Reads Mapped','Gene length covered by reads','Gene Length','Coverage'])
-    sns.kdeplot(data=sample_coverage_table['Coverage'])
-    sample_coverage_table.to_csv(file_name_loc+"_coverage.csv")
-
-
-os.system('pwd')
-
 
 import glob
 
-
-for i in glob.glob("Storage_Folder/*.fastq.gz"):
+files_for_loop_running = []
+for i in os.listdir("/media/neha/My Passport/RNA_seq_Asha_070423/"):
+#for i in glob.glob("/media/neha/My\ Passport/RNA_seq_Asha_070423/*.fastq.gz"):
     filename = i.split("/")[-1]
-    filelocation = i.split("/")[0]+"/"+i.split("/")[1]
-    print(filename,filelocation)
-    run_alignment(filename,filelocation)
+    files_for_loop_running.append(i)
+    
+for i in files_for_loop_running:
+    	run_alignment(filename,'/media/neha/My\ Passport/RNA_seq_Asha_070423/')
 
 
 
