@@ -1,6 +1,7 @@
 # RNA sequencing Analysis -  From fastq files to differential expression analysis
 
 ## Overview of RNA sequencing
+![Overview](https://github.com/NehaSontakk/RNA-sequencing-fastq-to-differential-gene-expression/blob/main/README_Addons/RNA_Sequencing.png)
 
 ## Installations and dependencies
 ```
@@ -25,6 +26,8 @@ sudo apt-get install bedtools
 |EdgeR Normalization 190423.ipynb | Code for DGE analysis and Log Fold Change Outputs | R  code for coverage to logFC generation  | Written by Neha Sontakke.   |
 
 ## File usage flowchart
+
+![Overview](https://github.com/NehaSontakk/RNA-sequencing-fastq-to-differential-gene-expression/blob/main/README_Addons/Code_Running_Flowchart.png)
 
 ## From fastq to coverage files
 ```
