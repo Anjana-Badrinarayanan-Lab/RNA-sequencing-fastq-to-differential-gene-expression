@@ -48,3 +48,4 @@ List below specifies all places requiring user input
 5. Comparative groups have to be specified below. The prefix “group” has to be present, the sample names have to be given as specified in step 6 and 7 above. "groupSampleName-groupSampletobeNormalisedto". For example: _comparisons<-c("grouplexASidA-groupWT_0")_
 
 
+** Replace gff and fna files based on organism of interest from the NCBI databases (Also replace the names inside the code in that case).
