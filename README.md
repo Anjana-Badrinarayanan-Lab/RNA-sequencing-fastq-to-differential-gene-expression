@@ -38,3 +38,13 @@ python RNA_Seq_Analysis_Pipeline_Paired_End.py
 
 python RNA_Seq_Analysis_Pipeline_Single_End.py
 ```
+## From coverage to log FC files
+
+List below specifies all places requiring user input
+1. Open EdgeR Normalization 190423.ipynb in google collab
+2. Upload your coverage files to the data folder
+3. Specifying the names of the samples and number of files for that replicate (This is Step 6). This cell needs to be filled in with the following information: paste(rep("SAMPLENAME",NUMBER_OF_COVERAGE_FILES),seq(1,NUMBER_OF_COVERAGE_FILES),sep = "_"). _For example: colnames(GenewiseCounts) <- c(paste(rep("lexASidA",2),seq(1,2),sep = "_"),paste(rep("WT_0",4),seq(1,4),sep = "_"))_
+4. List of files with the replicates named as specified (This is Step 7). Just like above this needs a specification of individual samples: rep("SAMPLENAME",NUMBER_OF_COVERAGE_FILES). For example: _group<- c(rep("lexASidA",2),rep("WT_0",4))_
+5. Comparative groups have to be specified below. The prefix “group” has to be present, the sample names have to be given as specified in step 6 and 7 above. "groupSampleName-groupSampletobeNormalisedto". For example: _comparisons<-c("grouplexASidA-groupWT_0")_
+
+
