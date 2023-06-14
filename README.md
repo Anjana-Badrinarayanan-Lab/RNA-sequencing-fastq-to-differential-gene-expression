@@ -24,6 +24,7 @@ sudo apt-get install bedtools
 | RNA_Seq_Analysis_Pipeline_Paired_End.py | Code to run all the RNA sequencing steps on the fastq files for paired end sequencing                                                                                                                   | Python containing code for fastq to coverage file generation                                                                    | Written by Neha Sontakke.   |
 | RNA_Seq_Analysis_Pipeline_Single_End.py | Code to run all the RNA sequencing steps on the fastq files for single ended sequencing                                                                                                                   | Python containing code for fastq to coverage file generation                                                                    | Written by Neha Sontakke.   |
 |EdgeR Normalization 190423.ipynb | Code for DGE analysis and Log Fold Change Outputs | R  code for coverage to logFC generation  | Written by Neha Sontakke.   |
+|RPKM, TPM, FPKM, CPM calculations.ipynb | Code for Normalization Outputs | Python  code for coverage to FPKM/RPKM and TPM generation  | Written by Neha Sontakke.   |
 
 ## File usage flowchart
 
@@ -40,12 +41,21 @@ python RNA_Seq_Analysis_Pipeline_Single_End.py
 ```
 ## From coverage to log FC files
 
-List below specifies all places requiring user input
+The list below specifies all places requiring user input
 1. Open EdgeR Normalization 190423.ipynb in google collab
-2. Upload your coverage files to the data folder
-3. Specifying the names of the samples and number of files for that replicate (This is Step 6). This cell needs to be filled in with the following information: paste(rep("SAMPLENAME",NUMBER_OF_COVERAGE_FILES),seq(1,NUMBER_OF_COVERAGE_FILES),sep = "_"). _For example: colnames(GenewiseCounts) <- c(paste(rep("lexASidA",2),seq(1,2),sep = "_"),paste(rep("WT_0",4),seq(1,4),sep = "_"))_
-4. List of files with the replicates named as specified (This is Step 7). Just like above this needs a specification of individual samples: rep("SAMPLENAME",NUMBER_OF_COVERAGE_FILES). For example: _group<- c(rep("lexASidA",2),rep("WT_0",4))_
-5. Comparative groups have to be specified below. The prefix “group” has to be present, the sample names have to be given as specified in step 6 and 7 above. "groupSampleName-groupSampletobeNormalisedto". For example: _comparisons<-c("grouplexASidA-groupWT_0")_
+2. Run the first line of code
+3. Upload your coverage files to the data folder
+4. Specifying the names of the samples and number of files for that replicate (This is Step 6). This cell needs to be filled in with the following information: paste(rep("SAMPLENAME",NUMBER_OF_COVERAGE_FILES),seq(1,NUMBER_OF_COVERAGE_FILES),sep = "_"). _For example: colnames(GenewiseCounts) <- c(paste(rep("lexASidA",2),seq(1,2),sep = "_"),paste(rep("WT_0",4),seq(1,4),sep = "_"))_
+5. List of files with the replicates named as specified (This is Step 7). Just like above this needs a specification of individual samples: rep("SAMPLENAME",NUMBER_OF_COVERAGE_FILES). For example: _group<- c(rep("lexASidA",2),rep("WT_0",4))_
+6. Comparative groups have to be specified below. The prefix “group” has to be present, the sample names have to be given as specified in step 6 and 7 above. "groupSampleName-groupSampletobeNormalisedto". For example: _comparisons<-c("grouplexASidA-groupWT_0")_
 
 
 ** Replace gff and fna files based on organism of interest from the NCBI databases (Also replace the names inside the code in that case).
+
+## From coverage to RPKM/FPKM and TPM files
+
+The list below specifies all places requiring user input
+1. Open RPKM, TPM, FPKM, CPM calculations.ipynb in google collab
+2. Run the first line of code
+3. Upload your coverage files to the data folder
+4. Run the rest of the code and collect your final data from RPKM_FPKM_TPM_Outputs.zip 
