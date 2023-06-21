@@ -48,7 +48,7 @@ def run_get_coverage_files(file1,file2,filelocation):
 	#Create SAM file combining alignments of both fastq files (from paired end sequencing run)
 	#Using BWA sampe command (sampe is for paired end)
 	os.system('bwa sampe GCF_000022005.1_ASM2200v1_genomic.fna '+file1_name+'.sai '+file2_name+'.sai '+file1_name+'.fastq '+file2_name+'.fastq > '+final_filename+'.sam')
-      print("SAM file made.")	
+      	print("SAM file made.")	
 
 	#Re zip the fastq files to save space on the disk, this step might take some time.
 	os.system('gzip '+file1_name+'.fastq')
