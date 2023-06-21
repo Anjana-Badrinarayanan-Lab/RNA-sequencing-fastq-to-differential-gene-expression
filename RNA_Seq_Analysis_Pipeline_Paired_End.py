@@ -1,6 +1,6 @@
 #READ the comments!!!
 
-###Paired End RNA seq pipeline : Will take approx. 20 minutes to run
+###Paired End RNA seq pipeline : Will take approx. 40 minutes to run
 #Please do not change the names of fastq files from the names given by the sequencing facility
 #Please store input fastq files in Input_Output_Storage_Folder
 #Find the output in the same folder
@@ -89,7 +89,7 @@ def run_get_coverage_files(file1,file2,filelocation):
 file_groups = {}
 
 # Loop through each file in the directory
-for filename in os.listdir("/Input_Output_Storage_Folder/"):
+for filename in os.listdir("./Input_Output_Storage_Folder/"):
     # Split the filename into components based on underscores
     parts = filename.split("_")
 
@@ -108,4 +108,4 @@ for stem in file_groups:
 	  #get names for file one and file 2
         print(file_groups[stem][0], file_groups[stem][1])
 	  #run function on all files in the storage folder
-        run_get_coverage_files(file_groups[stem][0],file_groups[stem][1],"/Input_Output_Storage_Folder/")
+        run_get_coverage_files(file_groups[stem][0],file_groups[stem][1],"./Input_Output_Storage_Folder/")
