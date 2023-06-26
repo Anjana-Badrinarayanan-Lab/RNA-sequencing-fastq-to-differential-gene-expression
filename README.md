@@ -39,7 +39,7 @@ python RNA_Seq_Analysis_Pipeline_Paired_End.py
 
 python RNA_Seq_Analysis_Pipeline_Single_End.py
 ```
-## From coverage to log FC files
+## From coverage to EdgeR calculated log FC files
 
 The list below specifies all places requiring user input
 1. Open EdgeR Normalization 190423.ipynb in google collab
