@@ -49,8 +49,8 @@ def run_get_coverage_files(file1,file2,filelocation):
 # Create an empty dictionary to store file groups
 file_groups = {}
 
-# Loop through each file in the directory
-for filename in os.listdir("/media/neha/My Passport/Input_Output_Storage_Folder/"):
+# Loop through each file in the directory - specify your directory location
+for filename in os.listdir("./Input_Output_Storage_Folder/"):
 	if filename.endswith(".fastq.gz"):
 	    # Split the filename into components based on underscores
 	    parts = filename.split("_")
@@ -68,4 +68,5 @@ for filename in os.listdir("/media/neha/My Passport/Input_Output_Storage_Folder/
 for stem in file_groups:
     if len(file_groups[stem]) == 2:
         print(file_groups[stem][0], file_groups[stem][1])
-        run_get_coverage_files(file_groups[stem][0],file_groups[stem][1],"/media/neha/My\ Passport/Input_Output_Storage_Folder/")
+	#specify your directory location - if there is a space in your location please replace space by \ followed by the space
+        run_get_coverage_files(file_groups[stem][0],file_groups[stem][1],"./Input_Output_Storage_Folder/")
